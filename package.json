@@ -1,0 +1,37 @@
+{
+  "name": "romanify",
+  "version": "1.0.0",
+  "description": "Convert numbers to Roman numerals, including large numbers using overlines (supports numbers > 3999)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "docs"],
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf dist test-build",
+    "build": "npm run build",
+    "build:test": "tsc --project tsconfig.test.json",
+    "test": "npm run clean && npm run build && npm run build:test && node test-build/run-all-tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Charmingdc/Romanify.git"
+  },
+  "keywords": [
+    "roman",
+    "numerals",
+    "converter",
+    "typescript",
+    "roman-numerals",
+    "number-conversion",
+    "romanify"
+  ],
+  "author": "Charming Dc <charmingdc002@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Charmingdc/Romanify/issues"
+  },
+  "homepage": "https://github.com/Charmingdc/Romanify#readme",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
