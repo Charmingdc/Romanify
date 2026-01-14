@@ -1,14 +1,14 @@
 {
-  "name": "romanify",
+  "name": "@charmingdc/romanify",
   "version": "1.0.0",
   "description": "Convert numbers to Roman numerals, including large numbers using overlines (supports numbers > 3999)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist", "docs"],
+  "files": ["dist"],
   "type": "module",
   "scripts": {
     "clean": "rm -rf dist test-build",
-    "build": "npm run build",
+    "build": "tsc",
     "build:test": "tsc --project tsconfig.test.json",
     "test": "npm run clean && npm run build && npm run build:test && node test-build/run-all-tests.js"
   },
