@@ -59,7 +59,7 @@ const ContributionFooter = () => {
       </p>
 
       <p className="self-center text-muted mt-4">
-        {romanize(new Date().getFullYear())} Romanify.
+        © {romanize(new Date().getFullYear())} Romanify.
       </p>
     </section>
   );
