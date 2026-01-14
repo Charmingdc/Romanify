@@ -1,73 +1,108 @@
-# React + TypeScript + Vite
+# Romanify 🏛️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The official documentation and landing page for **@charmingdc/romanify**, a high-precision TypeScript utility designed to convert integers into Roman numerals with support for large-scale values via vinculum (overline) notation.
 
-Currently, two official plugins are available:
+This project is built to showcase the library's capabilities, providing a clean and responsive interface for developers to understand its implementation and integration.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Overview
 
-## React Compiler
+Romanify solves the limitation of traditional Roman numeral converters by implementing overline notation for values exceeding 3,999. The documentation site itself is built with a modern tech stack to ensure high performance, type safety, and an exceptional developer experience.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- **Large Value Support**: Converts positive integers beyond 3,999 using standard overline notation.
+- **Strictly Type-Safe**: Entirely written in TypeScript for robust integration.
+- **Minimalist Design**: A documentation site focused on readability and simplicity.
+- **Optimized Performance**: Built with Vite and Tailwind CSS for near-instant load times.
+- **Developer Centric**: Includes clear usage examples and design decision logs.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technologies Used
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Technology | Purpose |
+| :--- | :--- |
+| **React 19** | UI Library |
+| **TypeScript** | Type Safety |
+| **Vite** | Build Tooling |
+| **Tailwind CSS** | Styling |
+| **Motion** | Animation Engine |
+| **React Code Blocks** | Syntax Highlighting |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+
+Ensure you have Node.js installed on your local machine.
+
+```bash
+node -v
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Clone the Repository**
+   ```bash
+   git clone git@github.com:Charmingdc/Romanify
+   ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. **Navigate to the Project Directory**
+   ```bash
+   cd Romanify
+   ```
+
+3. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+
+4. **Start the Development Server**
+   ```bash
+   npm run dev
+   ```
+
+## Usage
+
+To use the **Romanify** library in your own project, follow these steps:
+
+### Installation via NPM
+```bash
+npm install @charmingdc/romanify
 ```
+
+### Basic Implementation
+Import the `romanize` function and pass the integer you wish to convert.
+
+```typescript
+import { romanize } from "@charmingdc/romanify";
+
+// Basic conversion
+const year = romanize(2024); // MMXXIV
+
+// Large value conversion
+const largeValue = romanize(5000); // V with overline
+```
+
+## Project Structure
+
+- `src/components/sections`: Contains the modular documentation components (Identity, Summary, Capabilities).
+- `src/components/ui`: Reusable UI elements like the `CodeCard`.
+- `tailwind.config.js`: Custom theme configuration using CSS variables for theme switching.
+
+## Contributing
+
+Contributions are what make the open-source community an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+- 🛠️ **Report Bugs**: Open an issue if you find any inconsistencies.
+- 💡 **Feature Requests**: Suggestions for new features are always welcome.
+- 🔧 **Pull Requests**: Ensure your code follows the existing architectural patterns and passes linting.
+
+## Author
+
+**Charmingdc**
+
+- **GitHub**: [Charmingdc](https://github.com/Charmingdc)
+- **Twitter**: [@Charmingdc01](https://x.com/Charmingdc01)
+- **Email**: [charmingdc002@gmail.com](mailto:charmingdc002@gmail.com)
+
+---
+
+[![Readme was generated by Dokugen](https://img.shields.io/badge/Readme%20was%20generated%20by-Dokugen-brightgreen)](https://www.npmjs.com/package/dokugen)

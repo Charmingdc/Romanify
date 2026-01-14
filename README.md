@@ -1,88 +1,99 @@
 # Romanify 🏛️
 
-A robust TypeScript utility engineered for converting integers into traditional Roman numerals. Unlike standard implementations that cap at 3,999, Romanify provides extended support for large-scale values by implementing the vinculum (overline) notation, allowing for precise conversion of numbers into the millions.
+A high-precision TypeScript utility for converting integers into Roman numerals. Unlike standard converters, Romanify supports the Vinculum system (overline notation), allowing it to accurately represent numbers far exceeding the traditional 3,999 limit.
 
 ## Features
-- **Large Number Support**: Handles values exceeding 3,999 using Unicode combining overlines.
-- **Strict Typing**: Built with TypeScript for full type safety and IDE autocompletion.
-- **Zero Dependencies**: Lightweight footprint ensuring minimal impact on your bundle size.
-- **Validation**: Built-in error handling for non-positive integers.
 
-## Getting Started
+- **Extended Range**: Supports numbers from 1 to 3,999,999 using proper Unicode overline characters.
+- **Type Safety**: Built entirely with TypeScript for robust type checking and IDE autocompletion.
+- **Lightweight**: Zero external dependencies, ensuring a minimal footprint in your project.
+- **Input Validation**: Includes built-in checks to ensure values are positive integers.
 
-### Installation
-To set up the project locally for development or testing:
+## Installation
 
-1. **Clone the Repository**:
+Follow these steps to set up the project locally for development or integration:
+
+1. **Clone the Repository**
+
    ```bash
-   git clone git@github.com:Charmingdc/Romanify.git
+   git clone git@github.com:Charmingdc/Romanify
+   ```
+
+2. **Navigate to the Directory**
+
+   ```bash
    cd Romanify
    ```
 
-2. **Install Dependencies**:
+3. **Install Dependencies**
+
    ```bash
    npm install
    ```
 
-3. **Build the Project**:
+4. **Build the Project**
    ```bash
    npm run build
    ```
 
 ## Usage
 
-Romanify exports a clean, single-purpose function. You can integrate it into your TypeScript or JavaScript projects as follows:
+You can import the `romanize` function directly into your TypeScript or JavaScript project.
 
-### Basic Example
 ```typescript
-import { romanize } from './dist/index.js';
+import { romanize } from "@charmingdc/romanify";
 
 // Standard conversion
 console.log(romanize(2024)); // Output: MMXXIV
 
-// Large number conversion (using overline notation)
-console.log(romanize(5000)); // Output: V̄
-console.log(romanize(1000000)); // Output: M̄
+// Large number conversion (using vinculum)
+console.log(romanize(5000)); // Output: V̅
+
+// Complex large numbers
+console.log(romanize(4500)); // Output: I̅V̅D
 ```
 
-### Handling Errors
-The library ensures input integrity by throwing an error if the number is less than or equal to zero.
-```typescript
-try {
-  romanize(0);
-} catch (error) {
-  console.error(error.message); // "Number must be greater than 0"
-}
+### Running Tests
+
+To ensure the conversion logic remains accurate across all numeral mappings:
+
+```bash
+npm test
 ```
 
 ## Technologies Used
 
-| Technology | Purpose |
-| :--- | :--- |
-| [TypeScript](https://www.typescriptlang.org/) | Programming language and type system |
-| [Node.js](https://nodejs.org/) | JavaScript runtime environment |
-| [NPM](https://www.npmjs.com/) | Package management and scripts |
+| Technology | Purpose                | Link                                                  |
+| ---------- | ---------------------- | ----------------------------------------------------- |
+| TypeScript | Language & Type Safety | [typescriptlang.org](https://www.typescriptlang.org/) |
+| Node.js    | Runtime Environment    | [nodejs.org](https://nodejs.org/)                     |
+| NPM        | Package Management     | [npmjs.com](https://www.npmjs.com/)                   |
 
 ## Contributing
-Contributions are what make the open-source community an amazing place to learn, inspire, and create.
 
-- 🛠️ **Report Bugs**: Open an issue if you find any calculation errors.
-- 💡 **Feature Requests**: Suggest improvements via the issues tab.
-- 🔧 **Pull Requests**: Ensure all code is tested before submission.
+Contributions are welcome to help improve the logic or performance of the converter.
+
+- 🍴 Fork the repository.
+- 🌿 Create a new branch for your feature or bug fix.
+- 🧪 Ensure all tests pass before submitting a pull request.
+- 📝 Document any changes in the function signatures.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ## Author Info
-**Adebayo Muis**
+
+**Adebayo Muis (Charming Dc)**
+
 - **GitHub**: [Charmingdc](https://github.com/Charmingdc)
-- **LinkedIn**: [Your LinkedIn Username]
-- **Twitter**: [Your Twitter Username]
+- **Twitter/X**: [@Charmingdc01](https://x.com/Charmingdc01)
+- **LinkedIn**: [Adebayo Muis](https://linkedin.com/in/adebayo-muis)
 
 ---
 
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)
 
 [![Readme was generated by Dokugen](https://img.shields.io/badge/Readme%20was%20generated%20by-Dokugen-brightgreen)](https://www.npmjs.com/package/dokugen)
