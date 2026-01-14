@@ -1,0 +1,5 @@
+# Hide all generated files from GitHub linguist
+# Only count TypeScript source files
+
+* linguist-generated=true
+src/** linguist-generated=false
