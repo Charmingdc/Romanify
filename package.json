@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/Charmingdc/Romanify/issues"
   },
-  "homepage": "https://github.com/Charmingdc/Romanify#readme",
+  "homepage": "https://myromanify.vercel.app",
   "devDependencies": {
     "typescript": "^5.9.3"
   }

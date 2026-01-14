@@ -1,0 +1,26 @@
+# Source files — users only need compiled JS & types
+src/
+docs/
+test/
+test-build/
+
+# Node modules & npm metadata
+node_modules/
+.npmignore
+package-lock.json
+
+# Configs not needed in npm package
+tsconfig*.json
+vite.config.ts
+
+# IDE / editor stuff
+.vscode/
+.idea/
+
+# Logs & temp files
+*.log
+*.tmp
+*.swp
+
+# Map files (optional, only include if you want users to debug)
+dist/**/*.map
